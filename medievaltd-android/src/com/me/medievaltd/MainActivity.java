@@ -11,8 +11,10 @@ public class MainActivity extends AndroidApplication {
         super.onCreate(savedInstanceState);
         
         AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
+        cfg.useAccelerometer = false;
+        cfg.useCompass = false;
         cfg.useGL20 = false;
         
-        initialize(new MainGdxGame(), cfg);
+        initialize(new Drop(), cfg);
     }
 }
